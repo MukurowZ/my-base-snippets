@@ -1,0 +1,8 @@
+{
+	"Svelte Single Base Page": {
+        "prefix": "svelte",
+        "body": [
+            "<script>\n\n</script>\n\n<div class=\"${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\">\n\n</div>\n\n<style>\n/* ${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {} */\n</style>"
+        ]
+    },
+}
