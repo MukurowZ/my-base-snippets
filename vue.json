@@ -1,26 +1,38 @@
 {
-    "Vue Single Page Base": {
-        "prefix": "vue",
-        "body": [
-            "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n$1\n</template>\n\n<script>\nexport default {\n};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
-        ]
-    },
-    "Vue Single Page TS": {
-        "prefix": "tsvue",
-        "body": [
-            "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator';\n\n@Component({\n\n})\n\nexport default class ${TM_FILENAME_BASE} extends Vue {}\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
-        ]
-    },
-    "Vue Single Page TS with Composition": {
-		"prefix": "compvue",
-		"body": [
-			"<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from '@vue/composition-api';\n\nconst ${TM_FILENAME_BASE} = defineComponent({\n\t// setup() {},\n});\n\nexport default ${TM_FILENAME_BASE};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
-		]
-    },
-    "Vue 3": {
-		"prefix": "vue3",
-		"body": [
-			"<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from 'vue';\n\nconst ${TM_FILENAME_BASE} = defineComponent({\n\t// setup() {},\n});\n\nexport default ${TM_FILENAME_BASE};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
-		]
-	},
+  "Vue 3": {
+    "prefix": "vue3",
+    "body": [
+      "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from 'vue';\n\nconst ${TM_FILENAME_BASE} = defineComponent({\n\t// setup() {},\n});\n\nexport default ${TM_FILENAME_BASE};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
+    ]
+  },
+  "Vue Single Page TS with Composition": {
+    "prefix": "compvue",
+    "body": [
+      "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from '@vue/composition-api';\n\nconst ${TM_FILENAME_BASE} = defineComponent({\n\t// setup() {},\n});\n\nexport default ${TM_FILENAME_BASE};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
+    ]
+  },
+  "Nuxt Single Page TS with Composition": {
+    "prefix": "compnuxt",
+    "body": [
+      "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { defineComponent } from '@nuxtjs/composition-api';\n\nconst ${TM_FILENAME_BASE} = defineComponent({\n\t// setup() {},\n});\n\nexport default ${TM_FILENAME_BASE};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
+    ]
+  },
+  "Nuxt 3": {
+    "prefix": "nuxt",
+    "body": [
+      "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\" setup>\n\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
+    ]
+  },
+  "Vue Single Page Base": {
+    "prefix": "vue",
+    "body": [
+        "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n$1\n</template>\n\n<script>\nexport default {\n};\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
+    ]
+  },
+  "Vue Single Page TS": {
+    "prefix": "tsvue",
+    "body": [
+        "<template lang=\"pug\">\n.${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}\n\t$1\n</template>\n\n<script lang=\"ts\">\nimport { Component, Vue } from 'vue-property-decorator';\n\n@Component({\n\n})\n\nexport default class ${TM_FILENAME_BASE} extends Vue {}\n</script>\n\n<style lang=\"scss\">\n// .${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g} {}\n</style>\n"
+    ]
+  },
 }
