@@ -1,0 +1,51 @@
+{
+  "Vivat 3.0 Alert System": {
+    "prefix": "alert",
+    "body": [
+      "import { useAlertStore } from '@/composables/vivat/useAlert';\nconst { alert } = useAlertStore();\nalert({ level: '', message: '' });"
+    ]
+  },
+  "Vivat 3.0 Permission System": {
+    "prefix": "hasPermission",
+    "body": [
+      "import { useAuthStore } from '@/composables/vivat/useAuth';\nconst authStore = useAuthStore();\nconst { hasPermission } = authStore;"
+    ]
+  },
+  "Vivat 3.0 Pusher integration": {
+    "prefix": "usePusher",
+    "body": [
+      "import { usePusherStore } from '@/composables/usePusher';\nconst { pusher } = storeToRefs(usePusherStore());"
+    ]
+  },
+
+  // NestJS
+  "nest-js-graphql-resolver": {
+    "prefix": "nest-resolver",
+    "body": [
+      "import { Resolver, Args, Query, Mutation } from '@nestjs/common';",
+			"import { ${TM_FILENAME_BASE/((\\w*)\\.)|([\\.(resolver?)\\.])|([-\\.]+)/${1:/pascalcase}/gm} } from 'src/@generated/${TM_FILENAME_BASE/(\\W(resolver))//gm}/${TM_FILENAME_BASE/(\\W(resolver))//gm}.model';",
+			"import { ${TM_FILENAME_BASE/((\\w*)\\.)|([\\.(resolver?)\\.])|([-\\.]+)/${1:/pascalcase}/gm}Service } from './${TM_FILENAME_BASE/(\\W(resolver))//gm}.service';",
+			"",
+			"@Resolver((of) => '${TM_FILENAME_BASE/((\\w*)\\.)|([\\.(resolver?)\\.])|([-\\.]+)/${1:/pascalcase}/gm}')",
+			"export class ${TM_FILENAME_BASE/(([A-Z]|[a-z]).+)/${1:/pascalcase}/} {",
+			"\t$1constructor(private readonly ${TM_FILENAME_BASE/(\\W(resolver))//gm}Service: ${TM_FILENAME_BASE/((\\w*)\\.)|([\\.(resolver?)\\.])|([-\\.]+)/${1:/pascalcase}/gm}Service) {}",
+			"}",
+		]
+	},
+  "nest-js-graphql-service": {
+    "prefix": "nest-service",
+    "body": [
+      "import { Injectable } from '@nestjs/common';",
+			"import { PrismaService } from 'src/prisma.service';",
+			// "import { UserCreateInput } from 'src/@generated/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}-create.input';",
+			// "import { UserPaginator } from 'src/@generated/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}-paginator.output';",
+			// "import { UserWhereInput } from 'src/@generated/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}-where.input';",
+			// "import { User } from 'src/@generated/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}/${TM_FILENAME_BASE/(^[A-Z][a-z]*|[a-z])([A-Z])?/${1:/downcase}${2:+-}${2:/downcase}/g}.model';",
+			"",
+			"@Injectable()",
+			"export class ${TM_FILENAME_BASE/(([A-Z]|[a-z]).+)/${1:/pascalcase}/} {",
+			"\t$1constructor(private prisma: PrismaService) {}",
+			"}",
+		]
+	},
+}
