@@ -1,6 +1,6 @@
 ### Dev dependencies
 ```bash
-yarn add eslint eslint-config-airbnb eslint-import-resolver-alias eslint-plugin-graphql eslint-plugin-import eslint-plugin-nuxt eslint-plugin-vue eslint-plugin-vuejs-accessibility @typescript-eslint/eslint-plugin @typescript-eslint/parser @volar/vue-language-plugin-pug @vue/eslint-config-airbnb @vue/eslint-config-typescript @nuxtjs/tailwindcss typescript postcss pug pug-plain-loader sas sass-loader ts-invariant --dev
+yarn add eslint eslint-config-airbnb eslint-import-resolver-alias eslint-plugin-graphql eslint-plugin-import eslint-plugin-nuxt eslint-plugin-vue eslint-plugin-vuejs-accessibility @typescript-eslint/eslint-plugin @typescript-eslint/parser @volar/vue-language-plugin-pug @vue/eslint-config-airbnb @vue/eslint-config-typescript @nuxtjs/tailwindcss typescript postcss pug pug-plain-loader sass sass-loader ts-invariant --dev
 ```
 --------------------
 
